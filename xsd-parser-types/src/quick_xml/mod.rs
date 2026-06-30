@@ -104,5 +104,5 @@ pub fn fraction_digits(s: &str, expected: usize) -> Result<(), ValidateError> {
 }
 
 static RX_DECIMAL: LazyLock<Regex> =
-    LazyLock::new(|| Regex::new(r"^-?([0-9]+)(?:\.([0-9]*))?$").unwrap());
+    LazyLock::new(|| Regex::new(r"^-?([0-9]*)(?:\.([0-9]*))?$").unwrap());
 static RX_WHITESPACE_COLLAPSE: LazyLock<Regex> = LazyLock::new(|| Regex::new(r"\s+").unwrap());
